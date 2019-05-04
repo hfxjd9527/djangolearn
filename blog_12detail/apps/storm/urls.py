@@ -21,5 +21,5 @@ urlpatterns = [
     # 标签页面
     url(r'^tag/(?P<tag>.*?)/$', IndexView.as_view(template_name='content.html'), name='tag'),
     # 文章详情页
-    url(r'^article/(?P<slug>.*?)/$', DetailView, name='article')
+    url(r'^article/(?P<slug>.*?)/$', DetailView.as_view(), name='article')
 ]
