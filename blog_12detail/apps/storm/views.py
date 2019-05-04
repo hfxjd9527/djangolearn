@@ -19,6 +19,7 @@ class IndexView(generic.ListView):
     template_name = 'index.html'
     # context_object_name属性用于给上下文变量取名（在模板中使用该名字）
     context_object_name = 'articles'
+    paginate_by = 10
 
 
 def MessageView(request):
