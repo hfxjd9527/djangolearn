@@ -145,4 +145,11 @@ def get_article_next(article_id):
         return article
     else:
         return
-
+    
+    
+# 获取文章详情页下方的推荐阅读文章
+@register.simple_tag
+def get_category_article():
+    article_4 = get_article_list('views', 4)
+    article_8 = get_article_list('views', 8)
+    return {'article_4': article_4, 'article_8': article_8}
